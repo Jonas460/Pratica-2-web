@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="pagina2.html">
+    <script type="text/javascript" src="JS.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</head>
+
+
+<style>
+    body {
+        background-image: url(img/pexels-negative-space-48604.jpg);
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+</style>
+
+<body>
+    <nav>
+        <br>
+        <div class="obj1"></div>
+        <div class="texto1">
+            Sistema de Antendimento para profissionais da saúde e pacientes.
+        </div>
+        <div class="obj3">
+            <br>
+            <div class="logo"></div>
+        </div>
+    </nav><br>
+    <center><input class="texto3" type="text" value="Cadastro de servidores da Saude:" ></center> 
+    <form method="POST" onsubmit="return verificaDados()" >
+    <table class="quadrado">
+      
+        <th class="texto3">
+            
+            <br><label for="nome">Nome:</label>
+            <input class="caixa3" type="text" name="nome" />
+            <label for="pro2">Sexo:</label><br>
+            M:
+            <input class="caixa4" type="radio" name="op" />
+            F:
+            <input class="caixa4" type="radio" name="op" /><br>
+
+            <label for="pro3">Telefone:</label>
+            <input class="caixa3" type="text" name="servicos" onkeypress="$(this).mask('(00) 0.0000-0000');" placeholder="(00)9.0000-0000" /><br />
+            <label for="pro3">Email:</label>
+            <input class="caixa3" type="email" name="servicos" /><br />
+            <label for="nome">Numero do codigo entregue pela secretaria:</label><br>
+            <input class="caixa3" type="text" id="cod" onkeypress="$(this).mask('000.000-0');" placeholder="000.000-0"><br>
+        <th>
+        <th class="texto3">
+           
+            <label for="pro2">CPF:</label>
+
+            <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');" placeholder="000.000.000-00" /><br>
+
+            <label for="pro3">Endereço Completo:</label>
+            <input class="caixa3" type="text" name="servicos" /><br />
+            <center>
+                <label for="pro3">Cargo:</label>
+                <table>
+                    <th>
+                    Tec-Enferm: <br>
+                    <input class="caixa4" type="radio" name="servico" /><br>
+                    Medico(a): <br>
+                    <input class="caixa4" type="radio" name="servico" /><br>
+                    <th>
+                    Enfermeiro(a): <br>
+                    <input class="caixa4" type="radio" name="servico" /><br>
+                     Agente de saúde: <br>
+                    <input class="caixa4" type="radio" name="servico" /><br>
+                </th>
+                </table>
+            </center>
+    </table>
+    <center><br>
+        <div>
+            <input class="color" type="button" value="Cancelar"  onclick="javascript: location.href='pagina do servidor.html';"> 
+                <input class="color" type="submit" value="Enviar">
+        </div><br>
+    </center>
+</form>
+</body>
