@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="pagina2.html">
+    <link rel="stylesheet" href="cadastroFuncionario.html">
+    <script type="text/javascript" src="JS.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</head>
+
+
+<style>
+    body {
+        background-image: url(img/pexels-negative-space-48604.jpg);
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+</style>
+
+<body>
+    <nav>
+        <br><div class="obj1"></div>
+        <div class="texto1">
+            Sistema de Antendimento para profissionais da saúde e pacientes.
+        </div>
+        <div class= "obj3">
+            <br><div class= "logo"></div>
+        </div>
+
+    </nav>
+<form method="POST" onsubmit="return verificaDados()">
+    <center>
+        
+        <br> <br>
+        <div class="obj2">
+            <div class="texto2">
+                Pagina do funcionario da saúde
+                <br> Login
+            </div><br><br>
+
+           <div class="texto3">
+                Codigo do servidor:
+            </div> 
+            <div >
+                <input class="texto3" type="text" id="cod" onkeypress="$(this).mask('000.000-0');" placeholder="000.000-0">
+            </div>
+
+            <div class="texto3">
+               Senha:
+            </div> 
+            <div >
+                <input class="caixa2" type="password" id="senhaCartao" >
+            </div><br>
+            
+        <div>
+            <input class="color" type="button"  value="Cadastrar" onclick="javascript: location.href='cadastroFuncionario.html';" > 
+            <input class="color" type="button"  value="Entrar" onclick="javascript: location.href='pagina_medico.html';">
+        </div><br>
+        <div>
+            <input class= "barra" type ="button" value="Acesso como paciente" onclick="javascript: location.href='sistema de saude.html';" >
+        </div><br>
+
+    </center>
+</form>
+</body>
