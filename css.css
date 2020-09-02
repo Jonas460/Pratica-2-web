@@ -1,0 +1,220 @@
+nav .texto1{
+    position: absolute;
+    width: 615px;
+    height: 168px;
+    
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    
+    color: white;
+}
+
+nav .obj1{
+
+    position: absolute;
+    width: 637px;
+    height: 189px;
+    
+    background: #144C8C;
+    border: 7px solid #144C8C;
+    box-sizing: border-box;
+    border-radius: 63px;
+}
+
+nav .logo{
+    
+background: url(img/Logo_SUS.svg.png);
+background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  height: calc(25vh - 62px);
+ 
+  
+  
+}
+nav .obj3{
+width: 1324px;
+height: 189px;
+
+background: white;
+border: 7px solid #144C8C;
+box-sizing: border-box;
+border-radius: 63px;
+}
+
+.obj2{
+    width: 1024px;
+    height: 120px;
+    
+    background: #FFFFFF;
+    border: 5px solid #144C8C;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.texto2{
+width: 770px;
+height: 85px;
+
+font-family: Arimo;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 55px;
+text-align: center;
+
+color: #144C8C;
+
+}
+.texto3{
+    width: 550px;
+    height: 41px;
+    
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-align: center;
+    
+    color: #144C8C;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: #000;
+    
+}
+input.caixa {
+width: 80px;
+height: 50px;
+font-size: 25px;
+
+background: #FFFFFF;
+border: 3px solid #144C8C;
+box-sizing: border-box;
+
+}
+
+input.caixa2 {
+    width: 320px;
+    height: 50px;
+    font-size: 25px;
+    
+    background: #FFFFFF;
+    border: 3px solid #144C8C;
+    box-sizing: border-box;
+    
+}
+input.caixa3 {
+    width: 550px;
+    height: 55px;
+    font-size: 25px;
+    
+    background: #FFFFFF;
+    border: 3px solid #144C8C;
+    box-sizing: border-box;
+    
+}
+input.caixa4 {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    
+    background: #FFFFFF;
+    border: 3px solid #144C8C;
+    box-sizing: border-box;
+    
+}
+
+input.color{
+width: 272px;
+height: 57px;
+font-family: Arimo;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 55px;
+text-align: center;
+
+color: #FFFFFF;
+background: #144C8C;
+border-radius: 32px;
+}
+
+input.barra{
+width: 973.87px;
+height: 65.84px;
+
+font-family: Arimo;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 55px;
+text-align: center;
+
+color: #FFFFFF;
+background: #144C8C;
+border-radius: 32px;
+}
+
+/*CSS da Pagina 2 */
+
+.botoes{
+width: 1324px;
+height: 141px;
+
+background: #FFFEFE;
+border: 8px solid #144C8C;
+box-sizing: border-box;
+border-radius: 49px;
+}
+input.botoes2{
+width: 400px;
+height: 79px;
+background: #144C8C;
+border-radius: 21px;
+
+width: 400px;
+height: 80px;
+
+font-family: Arimo;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 41px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.quadrado{
+width: 1324px;
+height: 400px;
+
+background: #FFFFFF;
+border: 5px solid #144C8C;
+box-sizing: border-box;
+border-radius: 3px;
+}
+
+.paciente{
+    width: 400px;
+    height: 90px;
+    background: #144C8C;
+    border-radius: 21px;
+    
+    width: 400px;
+    height: 90px;
+    
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #FFFFFF;
+
+}
