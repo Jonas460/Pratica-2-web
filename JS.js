@@ -29,38 +29,8 @@ function armazenar_dados(){
 
 // Cadastro//
 
-alert("Bem vindo!");
 
-function verificaDados() {
-
-    var x1 = document.forms["Cadastro"]["unome"].value;
-    var x2 = document.forms["Cadastro"]["uendereco"].value;
-    var x3 = document.forms["Cadastro"]["ufone"].value;
-    var x4 = document.forms["Cadastro"]["ucpf"].value;
-    var x5 = document.forms["Cadastro"]["ri"].value;
-
-    if (x1 == "" || x2 == "" || x3 == "" || x4 == "" || x5 == "") {
-      alert("Preencha os campos obrigatórios");
-      return false;
-    }
-
-    var xx1 = document.forms["Cadastro"]["uetinia"].value;
-    var xx2 = document.forms["Cadastro"]["udsei"].value;
-    var xx3 = document.forms["Cadastro"]["ucorem"].value;
-    var xx4 = document.forms["Cadastro"]["ucodigo"].value;
-
-    if(x5 == "True" || xx1 == "" || xx2 == "" || xx3 == "" || xx4 == ""){
-      alert("Preencha os campos obrigatórios");
-      return false;
-    }
-    if(x5 == "False" || xx1 != "" || xx2 != "" || xx3 != "" || xx4 != ""){
-      alert("Não preencha esses campos");
-      return false;
-    }
-
-  }
-
-  function pegarDados() {
+function pegarDados() {
 
     var nomeUser = document.getElementsByClassName("unome").value;
     var enderecoUser = document.getElementsByClassName("uendereco").value;
