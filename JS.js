@@ -1,71 +1,137 @@
 function verificaDados(){
-    var inputs = document.getElementsByClassName('caixa3');
-    var len = inputs.length;
-    var valid = true;
-
-    for (var i = 0; i < len; i++) {
-      if (!inputs[i].value) {
-        valid = false;
-      }
-    }
-
-    if (!valid) {
-      alert('Por favor preencha todos os campos.');
-      return false;
-    } else {
-      return true
+  var inputs = document.getElementsByClassName('caixa3');
+  var len = inputs.length;
+  var valid = true;
+  for (var i = 0; i < len; i++) {
+    if (!inputs[i].value) {
+      valid = false;
     }
   }
-
-  function armazenar_dados(){
-      localStorage.setItem("")
+  if (!valid) {
+    alert('Por favor preencha todos os campos.');
+    return false;
+  } else {
+    return true
   }
+}
 
-  alert("Bem vindo!");
+
+function pegaDadosFunci() {
+
+  var nomeMed = document.getElementById("nomeMed").value;
+  var telMed = document.getElementById("telMed").valu;
+  var emailMed = document.getElementById("emailMed").value;
+  var end = document.getElementById("end").valu;
+  var cpf = document.getElementById("ucpf").value;
+  var cod = document.getElementById("cod");
+  var senhaCart = document.getElementById("senhaCart");
+  
+     
+      celu1.innerHTML = nomeMed;
+      celu2.innerHTML = telMed;
+      celu3.innerHTML = emailMed;
+      celu5.innerHTML = end;
+      celu4.innerHTML = cpf;
+      celu6.innerHTML = cod;
+      celu7.innerHTML = senhaCart;
+  
+      <table border="2" id="tabela" name="tabela" class="cortabela">
+            
+      
+          <td>
+              <p id="nomeMed"></p>
+          </td>
+          <td>
+              <p id="telMed"></p>
+          </td>
+          <td>
+              <p id="emailMed"></p>
+          </td>
+          <td>
+              <p id="end"></p>
+          </td>
+          <td>
+              <p id="cpf" ></p>
+          </td>
+          <td>
+              <p id="cod" ></p>
+          </td>
+          <td>
+              <p id="senhaCart" ></p>
+          </td>
+
+      
+  </table>
+}
 function pegaDados() {
 
-var nomeU = document.getElementById("nome").value;
-var sexoU = document.getElementById("opcao").value
-var foneU = document.getElementById("ufone").valu;
-var enderecoU = document.getElementById("endereco").value;
-var numCard = document.getElementById("cod").valu;
-var cpfU = document.getElementById("ucpf").value;
+  var nome = document.getElementById("nome").value;
+  var ufone = document.getElementById("ufone").valu;
+  var ende = document.getElementById("ende").value;
+  var numCanumCartao1 = document.getElementById("numCanumCartao1").valu;
+  var ucpf = document.getElementById("ucpf").value;
+  var email = document.getElementById("email");
+  var senha = document.getElementById("senha");
+  
+     
+      celu1.innerHTML = nome;
+      celu2.innerHTML = ende;
+      celu3.innerHTML = ufone;
+      celu5.innerHTML = ucpf;
+      celu4.innerHTML = email;
+      celu6.innerHTML = numCanumCartao1;
+      celu7.innerHTML = senha;
+  
+      <table border="2" id="tabela" name="tabela" class="cortabela">
+            
+      
+          <td>
+              <p id="nome"></p>
+          </td>
+          <td>
+              <p id="ende"></p>
+          </td>
+          <td>
+              <p id="ufone"></p>
+          </td>
+          <td>
+              <p id="ucpf"></p>
+          </td>
+          <td>
+              <p id="email" ></p>
+          </td>
+          <td>
+              <p id="numCanumCartao1" ></p>
+          </td>
+          <td>
+              <p id="senha" ></p>
+          </td>
 
-   
-    celu1.innerHTML = nomeU;
-    celu2.innerHTML = enderecoU;
-    celu3.innerHTML = foneU;
-    celu5.innerHTML = cpfU;
-    celu4.innerHTML = emailU;
-    celu6.innerHTML = sexoU;
-    celu7.innerHTML = numCard
-
-    if (celu1 == "" || celu2 == "" || celu3 == "" || celu4 == "" || celu5 == "" || celu6 == "" || celu7 == "") {
-      alert("Preencha os campos obrigatórios");
-      return false;
-    }
-
+      
+  </table>
 }
-function armazenar_dados(){
-  localStorage.setItem("")
-}
-
-  function Login() {
-    var susCard = document.getElementById("cod").value;
-    var senhaU = document.getElementsById("senhaCartao").value;
-   
-    celu1.innerHTML = susCard;
-    celu2.innerHTML = senhaU;
-   
-    if(numcard == "" || senhacard == ""){
-        alert("Preencha  todos os campos obrigatórios !");
-        return false;
-    }
+  function pegarDados() {
+    var numCart = document.getElementById("numCartao1");
+    var senhaLogin = document.getElementById("senhaCartao")
+    if(numCanumCartao1 == numCartao1 && senhaCad == senhaLogin  ){
+      onclick = "javascript: location.href='pagina do servidor.html';";
+      return true;
+  }else{
+    alert('Usuario ou senha incorretos');
+    return false;
+  }
   }
 
+  function guardarDados(){
+    var tecEnfer = document.getElementById("CorenTec");
+    var med = document.getElementById("CRM");
+    var enfer = document.getElementById("Coren");
+    var agenteSaude = document.getElementById("Agente"); 
+    
+    var table = document.getElementsByTagName('tabela')[0];
+    var newRow = table.insertRow(1);
+    var cel1 = newRow.insertCell(0);
+    
 
-  function apagarDados() {
-    alert('Dados apagados com sucesso!')
 }
-
 
