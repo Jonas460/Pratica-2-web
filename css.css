@@ -2,7 +2,7 @@ nav .texto1{
     position: absolute;
     width: 615px;
     height: 168px;
-    
+    background-attachment: fixed;
     font-family: Arimo;
     font-style: normal;
     font-weight: bold;
@@ -19,6 +19,7 @@ nav .obj1{
     width: 637px;
     height: 189px;
     
+    background-attachment: fixed;
     background: #144C8C;
     border: 7px solid #144C8C;
     box-sizing: border-box;
@@ -29,11 +30,10 @@ nav .logo{
     
 background: url(img/Logo_SUS.svg.png);
 background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  height: calc(25vh - 62px);
- 
-  
+background-position: right;
+background-size: contain;
+height: calc(25vh - 62px);
+   
   
 }
 nav .obj3{
@@ -96,9 +96,31 @@ border: 3px solid #144C8C;
 box-sizing: border-box;
 
 }
+input.caixa5 {
+    width: 190px;
+    height: 50px;
+    background: url(img/olho.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: #144C8C;
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: #000;
+  
+    box-sizing: border-box;
+    
+border-radius: 32px;
+    
+    
+    }
 
 input.caixa2 {
-    width: 320px;
+    width: 350px;
     height: 50px;
     font-size: 25px;
     
@@ -217,4 +239,9 @@ border-radius: 3px;
     
     color: #FFFFFF;
 
+}
+
+div#Centralizar{
+    margin: 0 auto;
+    width: 700px;
 }
