@@ -35,32 +35,43 @@
     </nav><br>
     <center><input class="texto3" type="text" value="Cadastro de Pacientes:" ></center> 
    
-    <form method="POST" onsubmit="return verificaDados()" >
-    <table class="quadrado">
-        
-        <th class="texto3">
-            
-            <br><label for="nome">Nome:</label>
-            <input class="caixa3" type="text"  id= "nome" />
-            <label for="pro3">Telefone:</label>
-            <input class="caixa3" type="text" class="form-control" id="ufone" onkeypress="$(this).mask('(00) 0.0000-0000');" placeholder="(00)9.0000-0000"/><br />
-            <label for="pro3">Email:</label>
-            <input class="caixa3" type="email"  id="email"/><br />
-        <th>
+    <form method="POST" onsubmit="return verificaDados()">
+        <table class="quadrado">
+
             <th class="texto3">
-                <label for="nome">Numero do Cartão:</label><br>
-                <input class="caixa3" type="text" id="numCartao1"  id="cod" onkeypress="$(this).mask('000.0000.0000.0000');" placeholder="000.0000.0000.0000"><br>
-               
-                <label for="pro2">CPF:</label>
-                <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');" placeholder="000.000.000-00" /><br>
-    
+
+                <label for="nome">Nome:</label>
+                <input class="caixa3" type="text" id="nome" />
+                <label for="pro3">Telefone:</label>
+                <input class="caixa3" type="text" class="form-control" id="ufone"
+                    onkeypress="$(this).mask('(00) 0.0000-0000');" placeholder="(00)9.0000-0000" /><br />
+                <label for="pro3">Email:</label>
+                <input class="caixa3" type="email" id="email" /><br />
                 <label for="pro3">Endereço Completo:</label>
-                <input class="caixa3" type="text" id="ende" /><br /> 
-                
-                Complemento:
-                <input class="caixa3" type="text" name="servicos" />
-           
-</table>
+                <input class="caixa3" type="text" id="ende" /><br />
+            <th>
+            <th class="texto3">
+                <label for="pro2">CPF:</label>
+                <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');"
+                    placeholder="000.000.000-00" /><br>
+                <label for="nome">Numero do Cartão:</label><br>
+                <input class="caixa3" type="text" id="numCartao1" id="cod"
+                    onkeypress="$(this).mask('000.0000.0000.0000');" placeholder="000.0000.0000.0000"><br>
+                Senha: <br>
+                <input class="caixa2" type="password" id="senha" /> <input class="caixa5" type="button"
+                    onclick=" mostrarSenha2()" value="Ver senha" /> <br>
+                Confirmar senha:
+                <input class="caixa3" type="password" id="senhaConfirm2" />
+                <script>
+                    function mostrarSenha2() {
+
+                        if (senha.type == "password") {
+                            senha.type = "text"
+                        } else {
+                            senha.type = "password"
+                        }
+                    }</script>
+        </table>
 
 <center>
    
