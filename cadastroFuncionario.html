@@ -36,45 +36,45 @@
         </div>
     </nav><br>
     <center><input class="texto3" type="text" value="Cadastro de servidores da Saude:" ></center> 
-    <form method="POST" onsubmit="return verificaDados()" >
-    <table class="quadrado">
-      
-        <th class="texto3">
-            
-            <br><label for="nome">Nome:</label>
-            <input class="caixa3" type="text" name="nome" />
-            <label for="pro3">Telefone:</label>
-            <input class="caixa3" type="text" name="servicos" onkeypress="$(this).mask('(00) 0.0000-0000');" placeholder="(00)9.0000-0000" /><br />
-            <label for="pro3">Email:</label>
-            <input class="caixa3" type="email" name="servicos" /><br />
-            <label for="nome">Numero do codigo entregue pela secretaria:</label><br>
-            <input class="caixa3" type="text" id="cod" onkeypress="$(this).mask('000.000-0');" placeholder="000.000-0"><br>
-        <th>
-        <th class="texto3">
-           
-            <label for="pro2">CPF:</label>
+  <form method="POST" onsubmit="return verificaDados()">
+        <table class="quadrado">
 
-            <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');" placeholder="000.000.000-00" /><br>
+            <th class="texto3">
+                <label for="nome">Nome:</label>
+                <input class="caixa3" type="text" id="nomeMed" />
+                <label for="pro3">Telefone:</label>
+                <input class="caixa3" type="text" id="telMed" onkeypress="$(this).mask('(00) 0.0000-0000');"
+                    placeholder="(00)9.0000-0000" /><br />
+                <label for="pro3">Email:</label>
+                <input class="caixa3" type="email" id="emailMed" /><br />
+                <label for="pro3">Endereço Completo:</label>
+                <input class="caixa3" type="text" id="end" /><br />
 
-            <label for="pro3">Endereço Completo:</label>
-            <input class="caixa3" type="text" name="servicos" /><br />
-            <center>
-                <label for="pro3">Cargo:</label>
-                <table>
-                    <th>
-                    Tec-Enferm: <br>
-                    <input class="caixa4" type="radio" name="servico" /><br>
-                    Medico(a): <br>
-                    <input class="caixa4" type="radio" name="servico" /><br>
-                    <th>
-                    Enfermeiro(a): <br>
-                    <input class="caixa4" type="radio" name="servico" /><br>
-                     Agente de saúde: <br>
-                    <input class="caixa4" type="radio" name="servico" /><br>
-                </th>
-                </table>
-            </center>
-    </table>
+            <th>
+            <th class="texto3">
+
+                <label for="pro2">CPF:</label>
+                <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');"
+                    placeholder="000.000.000-00" /><br>
+
+                <label for="nome">Codigo entregue pela secretaria:</label><br>
+                <input class="caixa3" type="text" id="cod" onkeypress="$(this).mask('000.000-0');"
+                    placeholder="000.000-0"><br>
+                Senha: <br>
+                <input class="caixa2" type="password" id="senhaCart" /> <input class="caixa5" type="button"
+                    onclick=" mostrarSenha()" value="Ver senha" /> <br>
+                Confirmar senha:
+                <input class="caixa3" type="password" id="senhaConfirm" />
+
+                <script>function mostrarSenha() {
+
+                        if (senhaCart.type == "password") {
+                            senhaCart.type = "text"
+                        } else {
+                            senhaCart.type = "password"
+                        }
+                    }</script>
+        </table>
     <center><br>
         <div>
             <input class="color" type="button" value="Cancelar"  onclick="javascript: location.href='pagina do servidor.html';"> 
