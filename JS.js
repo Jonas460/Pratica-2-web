@@ -1,13 +1,16 @@
-function verificaDados(){
+/*Pagina do Medico*/
+
+function validaDadosFunci(){
   var inputs = document.getElementsByClassName('caixa3');
   var len = inputs.length;
-  var valid = true;
+ var valid = true;
   for (var i = 0; i < len; i++) {
     if (!inputs[i].value) {
       valid = false;
     }
   }
   if (!valid) {
+    location.href='cadastroFuncionario.html';
     alert('Por favor preencha todos os campos.');
     return false;
   } else {
@@ -18,120 +21,125 @@ function verificaDados(){
 
 function pegaDadosFunci() {
 
-  var nomeMed = document.getElementById("nomeMed").value;
-  var telMed = document.getElementById("telMed").valu;
-  var emailMed = document.getElementById("emailMed").value;
-  var end = document.getElementById("end").valu;
-  var cpf = document.getElementById("ucpf").value;
-  var cod = document.getElementById("cod");
-  var senhaCart = document.getElementById("senhaCart");
-  
-     
-      celu1.innerHTML = nomeMed;
-      celu2.innerHTML = telMed;
-      celu3.innerHTML = emailMed;
-      celu5.innerHTML = end;
-      celu4.innerHTML = cpf;
-      celu6.innerHTML = cod;
-      celu7.innerHTML = senhaCart;
-  
-      <table border="2" id="tabela" name="tabela" class="cortabela">
-            
-      
-          <td>
-              <p id="nomeMed"></p>
-          </td>
-          <td>
-              <p id="telMed"></p>
-          </td>
-          <td>
-              <p id="emailMed"></p>
-          </td>
-          <td>
-              <p id="end"></p>
-          </td>
-          <td>
-              <p id="cpf" ></p>
-          </td>
-          <td>
-              <p id="cod" ></p>
-          </td>
-          <td>
-              <p id="senhaCart" ></p>
-          </td>
 
-      
-  </table>
+var  dadosFunci = {
+Nome: document.getElementById("nomeMed").value,
+
+Telefone: document.getElementById("telMed").value,
+
+Email: document.getElementById("emailMed").value,
+
+Endereco: document.getElementById("end").value,
+
+Cpf: document.getElementById("ucpf").value,
+
+};
+var codFunci = document.getElementById("cod").value;
+
+var senhaFunci = document.getElementById("senhaFunci").value;
+
+
+alert('Dados salvos com sucesso');
+ localStorage.setItem('dadosFunci', JSON.stringify(dadosFunci));
+ 
+ localStorage.setItem('codFunci', JSON.stringify(codFunci));
+ 
+ localStorage.setItem('senhaFunci', JSON.stringify(senhaFunci));
+
+ document.onchange = saveItemDadosFunci;
+  
 }
-function pegaDados() {
 
-  var nome = document.getElementById("nome").value;
-  var ufone = document.getElementById("ufone").valu;
-  var ende = document.getElementById("ende").value;
-  var numCanumCartao1 = document.getElementById("numCanumCartao1").valu;
-  var ucpf = document.getElementById("ucpf").value;
-  var email = document.getElementById("email");
-  var senha = document.getElementById("senha");
-  
-     
-      celu1.innerHTML = nome;
-      celu2.innerHTML = ende;
-      celu3.innerHTML = ufone;
-      celu5.innerHTML = ucpf;
-      celu4.innerHTML = email;
-      celu6.innerHTML = numCanumCartao1;
-      celu7.innerHTML = senha;
-  
-      <table border="2" id="tabela" name="tabela" class="cortabela">
-            
-      
-          <td>
-              <p id="nome"></p>
-          </td>
-          <td>
-              <p id="ende"></p>
-          </td>
-          <td>
-              <p id="ufone"></p>
-          </td>
-          <td>
-              <p id="ucpf"></p>
-          </td>
-          <td>
-              <p id="email" ></p>
-          </td>
-          <td>
-              <p id="numCanumCartao1" ></p>
-          </td>
-          <td>
-              <p id="senha" ></p>
-          </td>
+function verificDadosFunci(){ 
 
-      
-  </table>
-}
-  function pegarDados() {
-    var numCart = document.getElementById("numCartao1");
-    var senhaLogin = document.getElementById("senhaCartao")
-    if(numCanumCartao1 == numCartao1 && senhaCad == senhaLogin  ){
-      onclick = "javascript: location.href='pagina do servidor.html';";
-      return true;
+  var cod = document.getElementById("cod2");
+  var senhaFunci = document.getElementById("senhaFuncionario");
+  
+  var s2 = localStorage.getItem('senhaFunci');
+  var cod3 = localStorage.getItem('codFunci');
+  
+  if(cod == cod3  && senhaFunci == s2 ){
+    location.href='pagina_medico.html';
+    alert('Tudo certo');
+    return true;
+    
   }else{
     alert('Usuario ou senha incorretos');
     return false;
+    
   }
   }
 
-  function guardarDados(){
-    var tecEnfer = document.getElementById("CorenTec");
-    var med = document.getElementById("CRM");
-    var enfer = document.getElementById("Coren");
-    var agenteSaude = document.getElementById("Agente"); 
-    
-    var table = document.getElementsByTagName('tabela')[0];
-    var newRow = table.insertRow(1);
-    var cel1 = newRow.insertCell(0);
-    
 
+
+
+/*Pagina do paciente*/
+function pegaDados() {
+ 
+var  dados = {
+Nome: document.getElementById("nome").value,
+
+Telefone: document.getElementById("ufone").value,
+
+Telefone: document.getElementById("ende").value,
+
+Cpf: document.getElementById("ucpf").value,
+
+Email: document.getElementById("email").value,
+  
+};
+
+var numCartao2 = document.getElementById("numCartao1").value;
+
+var senhaCart = document.getElementById( "senha").value;
+
+alert('Dados salvos com sucesso');
+ localStorage.setItem('dados', JSON.stringify(dados));
+ 
+ localStorage.setItem('numCartao2', JSON.stringify(numCartao2));
+ 
+ localStorage.setItem('senhaCart', JSON.stringify(senhaCart));
+
+ document.onchange = saveItemDados;
 }
+
+function verificDados(){ 
+
+var numCard = document.getElementById("CartaoSUS").value;
+var senhaLogin = document.getElementById("senhaCartao").value;
+
+var s = localStorage.getItem('senhaCart');
+var car = localStorage.getItem('numCartao2');
+
+if(numCard == car  && senhaLogin == s ){
+  location.href='pagina2.html';
+  alert('Tudo certo');
+  return true;
+  
+}else{
+  alert('Usuario ou senha incorretos');
+  return false;
+  
+}
+}
+
+function validaDados(){
+  var inputs = document.getElementsByClassName('caixa3');
+  var len = inputs.length;
+ var valid = true;
+  for (var i = 0; i < len; i++) {
+    if (!inputs[i].value) {
+      valid = false;
+    }
+  }
+  if (!valid) {
+    location.href='cadastro.html';
+    alert('Por favor preencha todos os campos.');
+    return false;
+  } else {
+    return true
+  }
+}
+
+
 
