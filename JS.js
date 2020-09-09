@@ -103,25 +103,52 @@ alert('Dados salvos com sucesso');
  document.onchange = saveItemDados;
 }
 
-function verificDados(){ 
 
-var numCard = document.getElementById("CartaoSUS").value;
-var senhaLogin = document.getElementById("senhaCartao").value;
+function set() {
+  var numCard = document.getElementById("numC").value;
+  var senhaLogin = document.getElementById("senhaC").value;
 
-var s = localStorage.getItem('senhaCart');
-var car = localStorage.getItem('numCartao2');
+  localStorage.setItem('numCard', JSON.stringify(numCard));
+  localStorage.setItem('senhaLogin', JSON.stringify(senhaLogin));
+  document.onchange = saveItemDados;
+}
 
-if(numCard == car  && senhaLogin == s ){
-  location.href='pagina2.html';
-  alert('Tudo certo');
-  return true;
-  
-}else{
-  alert('Usuario ou senha incorretos');
-  return false;
+
+
+
+
+function verificDados(){  
+
+  var numCard = localStorage.getItem('numCard');
+  console.log(numCard);
+  var senhaCard = localStorage.getItem('senhaLogin');
+  console.log(senhaCard);
+
+  var car = localStorage.getItem('numCartao2');
+  console.log(car);
+  var s = localStorage.getItem('senhaCartao');
+  console.log(s);
+
+if( car === numCard && s === senhaCard ){
+ 
+  alert('Tudo certo'); 
+  alert('Valores digitado no cadastro' + car + s);
+  alert('Valores do login' + numCard + senhaLogin);
+
+
+
+  return location.href='pagina2.html';
   
 }
+else{
+  alert('Deu erro :('); 
+  alert('Valores digitado no cadastro' + car + s);//212.1212.1212.1121123
+  alert('Valores do login' + numCard+ senhaLogin);//212.1212.1212.1121123
+ 
+  return location.href='LoginF.html';
 }
+}
+
 
 function validaDados(){
   var inputs = document.getElementsByClassName('caixa3');
