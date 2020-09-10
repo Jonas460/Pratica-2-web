@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="css.css">
+
+    <script type="text/javascript" src="JS.js"></script>
+
+</head>
+
+
+<style>
+    body {
+        background-image: url(img/pexels-negative-space-48604.jpg);
+        background-attachment: fixed;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+</style>
+
+<body>
+    <center>
+        <nav>
+
+            <br>
+            <div class="obj1"></div>
+
+            <div class="texto1">
+                Sistema de Antendimento para profissionais da saúde e pacientes.
+            </div>
+
+            <div class="obj3">
+                <br>
+                <div class="logo">
+                    <br> <br>
+
+                    <div class="paciente" id="Div1">
+                        Enfermeiro: Francisco Antonio <br>
+
+                        <h>Codigo:002.458-9 </h>
+
+                        <div><a href="sistema de saude.html">SAIR</a></div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+    </center>
+    <center><br>
+
+        <div class="botoes"><br>
+            <table>
+
+                <input class="botoes2" type="submit" id="pacient" value="Anotações" size="100"
+                    onclick="Paci('maisinfo');">
+
+            </table>
+        </div><br>
+
+        <div id="paci" style="display: none;" >
+            <div class="botoes"><br>
+                <label for="restricoes"></label>
+                <input class="botoes2" type="submit" id="Internado" value="P/Internados" onclick="Pac()" >
+
+                <input class="caixa6" type="text" id="cartPaci" placeholder="Numero do cartão do paciente"/>
+                <input class="color" type="submit" id="pacient" value="Entrar" 
+                onclick="Anot('maisinfo');">
+            </div><br>
+            <div class="enferImg" id="img" style="display: none;" >
+               
+            </div>
+        </div><br>
+
+                 
+        <div id="anotacoes" style="display: none;" class="interImg">           
+            
+        </div><br>
+           
+       
+    </center>
+
+</body>
