@@ -1,0 +1,118 @@
+/************************************** CSS - Pagina enfermeiro ***************************************/
+
+
+div#menu ul{ background-color:#144C8C; list-style: none; border-radius: 63px;}
+
+div#menu ul li{ display: inline; }
+
+div#menu ul li a{padding: 20px 20px; display: inline-block; color: white; text-decoration: none;}
+
+div#menu ul li a:hover{ color: blue}
+
+
+nav .texto{  
+    position: absolute;
+    width: 615px;
+    height: 168px;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    
+    color: white;
+}
+
+nav .caixaAzul{
+
+    position: absolute;
+    width: 637px;
+    height: 189px;
+    background:  #144C8C;
+    border: 7px solid #144C8C;
+    box-sizing: border-box;
+    border-radius: 63px;
+}
+
+nav .bordaInicio{
+    width: 1324px;
+    height: 189px;
+    background: #FFFEFE;
+    border: 8px solid #144C8C;
+    box-sizing: border-box;
+    border-radius: 49px;
+}
+
+
+.bordaBotoes{
+width: 1324px;
+height: 141px;
+background: #FFFEFE;
+border: 8px solid #144C8C;
+box-sizing: border-box;
+border-radius: 49px;
+}
+
+
+input.botaoEnf{
+    margin-left: 5px;
+    background: #144C8C;
+    border-radius: 21px;
+    width: 400px;
+    height: 80px;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+input.botaoEnf:hover{
+    background-color:blue;
+}
+
+
+
+/***********************************************************************************************/
+
+
+.cortexto {
+    height: 20px;
+    width:320px;
+    padding: 3px;
+    border: #101010 1px solid;
+}
+
+form .cortexto {
+    margin: 5px 0;
+}
+
+table{
+    margin: 15px;
+}
+
+
+div#caixaAzul2{
+
+    position: absolute;
+    width: 1335px;
+    height: 70px;
+    background:  #144C8C;
+    border: 7px solid #144C8C;
+    box-sizing: border-box;
+    border-radius: 63px;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    color:white;
+
+}
+
+textarea{
+    width: 321px;
+    height: 80px;
+}
