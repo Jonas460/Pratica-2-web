@@ -3,14 +3,14 @@
 
 <head>
     <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="pagina2.html">
-    <link rel="stylesheet" href="cadastro.html">
-    <link rel="stylesheet" href="pagina do servidor.html">
+    <script type="text/javascript" src="JS.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    </script>
 </head>
 
 
@@ -24,11 +24,12 @@
     }
 </style>
 
-<body>
+<body >
     <nav>
         <br><div class="obj1"></div>
         <div class="texto1">
             Sistema de Antendimento para profissionais da saúde e pacientes.
+            
         </div>
         <div class= "obj3">
             <br><div class= "logo"></div>
@@ -49,24 +50,24 @@
                 Numero do cartão do SUS:
             </div> 
             <div >
-                <input class="texto3" type="text" id="numCartao1" onkeypress="$(this).mask('000.0000.0000.0000');" placeholder="000.0000.0000.0000" >
+                <input class="texto3" type="text" id="CartaoSUS"  onkeypress="$(this).mask('000.0000.0000.0000');" placeholder="000.0000.0000.0000" >
             </div>
 
             <div class="texto3">
                Senha:
             </div> 
             <div >
-                <input class="caixa2" type="password" id="senhaCartao" >
+                <input class="caixa2" type="password" id="senhaCartao"  >
             </div><br>
             
         <div>
-            <input class="color" type="button"  value="Cadastrar" onclick="javascript: location.href='cadastro.html';" > <input class="color" type="submit" id="botao"  value="Entrar" >
+            <input class="color" type="button"  value="Cadastrar" onclick="javascript: location.href='cadastro.html';" > 
+            <input class="color" type="submit" id="botao"   value="Entrar" onclick="set()" >
         </div><br>
         <div>
-            <input class= "barra" type ="button"    value="Acesso como servidor da saúde" onclick="javascript: location.href='pagina do servidor.html';">
-        </div><br>
-
- </form>
+            <input class= "barra" type ="button" value="Acesso como servidor da saúde" onclick="javascript: location.href='pagina do servidor.html';">
+        </div><br>  
+   </form>
         
     </center>
 </body>
