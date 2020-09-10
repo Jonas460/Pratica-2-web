@@ -3,8 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="pagina2.html">
-    <script type="text/javascript" src="JS.js"></script> 
+    <script type="text/javascript" src="JS.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -35,13 +34,13 @@
             <div class="logo"></div>
         </div>
     </nav><br>
-    <center><input class="texto3" type="text" value="Cadastro de servidores da Saude:" ></center> 
-  <form method="POST" onsubmit="return verificaDados()">
-        <table class="quadrado">
+    <center><input class="texto3" type="text" value="Cadastro de servidores da Saude:"></center>
 
+    <form method="GET" action="pagina do servidor.html" onsubmit="return pegaDadosFunci()">
+        <table class="quadrado">
             <th class="texto3">
                 <label for="nome">Nome:</label>
-                <input class="caixa3" type="text" id="nomeMed" />
+                <input class="caixa3" type="text" id="nomeMed" maxlength="40"/>
                 <label for="pro3">Telefone:</label>
                 <input class="caixa3" type="text" id="telMed" onkeypress="$(this).mask('(00) 0.0000-0000');"
                     placeholder="(00)9.0000-0000" /><br />
@@ -50,21 +49,23 @@
                 <label for="pro3">Endereço Completo:</label>
                 <input class="caixa3" type="text" id="end" /><br />
 
-            <th>
-            <th class="texto3">
-
                 <label for="pro2">CPF:</label>
                 <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');"
                     placeholder="000.000.000-00" /><br>
+
+                Data de nascimento: <input class="caixa3" type="date" id="data" />
+
+            <th>
+            <th class="texto3">
 
                 <label for="nome">Codigo entregue pela secretaria:</label><br>
                 <input class="caixa3" type="text" id="cod" onkeypress="$(this).mask('000.000-0');"
                     placeholder="000.000-0"><br>
                 Senha: <br>
-                <input class="caixa2" type="password" id="senhaCart" /> <input class="caixa5" type="button"
+                <input class="caixa2" type="password" id="senhaFunci" /> <input class="caixa5" type="button"
                     onclick=" mostrarSenha()" value="Ver senha" /> <br>
                 Confirmar senha:
-                <input class="caixa3" type="password" id="senhaConfirm" />
+                <input class="caixa3" type="password" id="senhaConfirm" /><br>
 
                 <script>function mostrarSenha() {
 
@@ -73,13 +74,30 @@
                         } else {
                             senhaCart.type = "password"
                         }
-                    }</script>
+                    }</script><br>
+                <div class="obj4">
+                    <table class=" texto3">
+                        <label class="texto3 " for="pro3">Cargo:</label>
+                        <th>
+                            Tec-Enferm: <br>
+                            <input class="caixa4" type="radio" name="servico" id="tecEnferm" value="Enferm"/><br>
+                            Medico(a): <br>
+                            <input class="caixa4" type="radio" name="servico" id="medico" value="Medico"/><br>
+                        <th>
+                            Enfermeiro(a): <br>
+                            <input class="caixa4" type="radio" name="servico" id="Enfermeiro" value="Enfermeiro"/><br>
+                            Agente de saúde: <br>
+                            <input class="caixa4" type="radio" name="servico" id="AgentSaud" value="Agente de saúde:"/><br>
+                        </th>
+                    </table>
+                </div><br>
         </table>
-    <center><br>
-        <div>
-            <input class="color" type="button" value="Cancelar"  onclick="javascript: location.href='pagina do servidor.html';"> 
-                <input class="color" type="submit" value="Enviar">
-        </div><br>
-    </center>
-</form>
+        <center><br>
+            <div>
+                <input class="color" type="button" value="Cancelar"
+                    onclick="javascript: location.href='pagina do servidor.html';">
+                <input class="color" type="submit" value="Enviar" onclick="validaDadosFunci()">
+            </div><br>
+        </center>
+    </form>
 </body>
