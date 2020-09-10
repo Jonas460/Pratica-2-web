@@ -3,9 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="pagina2.html">
-    <link rel="stylesheet" href="cadastroFuncionario.html">
     <script type="text/javascript" src="JS.js"></script>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -35,7 +34,7 @@
         </div>
 
     </nav>
-<form method="POST" onsubmit="return verificaDados()">
+<form method="GET" onsubmit="return verificDadosFunci()">
     <center>
         
         <br> <br>
@@ -49,19 +48,21 @@
                 Codigo do servidor:
             </div> 
             <div >
-                <input class="texto3" type="text" id="cod" onkeypress="$(this).mask('000.000-0');" placeholder="000.000-0">
+                <input class="texto3" type="text" id="cod2" onkeypress="$(this).mask('000.000-0');" placeholder="000.000-0">
             </div>
 
             <div class="texto3">
                Senha:
             </div> 
             <div >
-                <input class="caixa2" type="password" id="senhaCartao" >
+                <input class="caixa2" type="password" id="senhaFuncionario" >
             </div><br>
+
             
         <div>
             <input class="color" type="button"  value="Cadastrar" onclick="javascript: location.href='cadastroFuncionario.html';" > 
-            <input class="color" type="button"  value="Entrar" onclick="javascript: location.href='pagina_medico.html';">
+
+            <input class="color" type="submit" id="botao"   value="Entrar" onclick="set2()" >
         </div><br>
         <div>
             <input class= "barra" type ="button" value="Acesso como paciente" onclick="javascript: location.href='sistema de saude.html';" >
