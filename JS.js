@@ -1,3 +1,4 @@
+reload();
 /*Pagina do Medico*/
 
 function validaDadosFunci(){
@@ -19,8 +20,27 @@ function validaDadosFunci(){
 }
 
 
-function pegaDadosFunci() {
 
+Array.from(document.querySelectorAll('input[type="radio"]')).forEach(function(item, index) {
+  item.addEventListener('click', save);
+});
+
+function save() {
+  var g1 = document.querySelector('input[name=servico]:checked').value;
+  localStorage.setItem("g1", g1);
+}
+function reload() {
+  var G1 = Array.from(document.getElementsByName('servico'));
+  var val1 = localStorage.getItem('g1');
+  for (var i = 0; i < G1.length; i++) {
+    if (G1[i].value == val1) {
+      G1[i].checked = true;
+    }
+  }
+}
+
+
+function pegaDadosFunci() {
 
 var  dadosFunci = {
 Nome: document.getElementById("nomeMed").value,
@@ -36,7 +56,9 @@ Cpf: document.getElementById("ucpf").value,
 };
 var codFunci = document.getElementById("cod").value;
 
-var senhaFunci = document.getElementById("senhaFunci").value;
+var senhaFunci2 = document.getElementById("senhaFunci").value;
+
+
 
 
 alert('Dados salvos com sucesso');
@@ -44,22 +66,56 @@ alert('Dados salvos com sucesso');
  
  localStorage.setItem('codFunci', JSON.stringify(codFunci));
  
- localStorage.setItem('senhaFunci', JSON.stringify(senhaFunci));
+ localStorage.setItem('senhaFunci2', JSON.stringify(senhaFunci2));
+
+ 
+ localStorage.setItem('save()', JSON.stringify(save(), g1));
 
  document.onchange = saveItemDadosFunci;
   
-}
+};
+
+function set2() {
+
+  var cod = document.getElementById("cod2").value;
+  var senha456 = document.getElementById("senhaFuncionario").value;
+  localStorage.setItem('cod', JSON.stringify(cod));
+  localStorage.setItem('senha456', JSON.stringify(senha456));
+  document.onchange = saveItemDados;
+};
 
 function verificDadosFunci(){ 
 
-  var cod = document.getElementById("cod2");
-  var senhaFunci = document.getElementById("senhaFuncionario");
+  var cod3 = localStorage.getItem('cod');
+  console.log(cod3);
+  var senhaF456 = localStorage.getItem('senha456');
+  console.log(senhaF456);
   
-  var s2 = localStorage.getItem('senhaFunci');
-  var cod3 = localStorage.getItem('codFunci');
+  var cod4 = localStorage.getItem('codFunci');
+  console.log(cod4);
+  var senha5 = localStorage.getItem('senhaFunci2');
+  console.log(senha5);
+
+  var cargo = localStorage.getItem('g1');
+  console.log(cargo);
   
-  if(cod == cod3  && senhaFunci == s2 ){
+  if(cod3 == cod4  && senhaF456 == senha5 && cargo == "Medico" ){
     location.href='pagina_medico.html';
+    alert('Tudo certo');
+    return true;
+    
+  }  if(cod3 == cod4  && senhaF456 == senha5 && cargo == "Enferm" ){
+    location.href='TecEnfer.html';
+    alert('Tudo certo');
+    return true;
+    
+  } if(cod3 == cod4  && senhaF456 == senha5 && cargo == "Enfermeiro" ){
+    location.href='Exames-Enfermeiro.html';
+    alert('Tudo certo');
+    return true;
+    
+  } if(cod3 == cod4  && senhaF456 == senha5 && cargo == "Agente de saúde:" ){
+    location.href='AgenteSaude.html';
     alert('Tudo certo');
     return true;
     
@@ -68,9 +124,7 @@ function verificDadosFunci(){
     return false;
     
   }
-  }
-
-
+  };
 
 
 /*Pagina do paciente*/
@@ -91,6 +145,7 @@ Email: document.getElementById("email").value,
 
 var numCartao2 = document.getElementById("numCartao1").value;
 
+
 var senhaCart = document.getElementById( "senha").value;
 
 alert('Dados salvos com sucesso');
@@ -103,135 +158,39 @@ alert('Dados salvos com sucesso');
  document.onchange = saveItemDados;
 }
 
-
 function set() {
-  var numCard = document.getElementById("numC").value;
-  var senhaLogin = document.getElementById("senhaC").value;
+
+  var numCard = document.getElementById("CartaoSUS").value;
+  var senhaLogin = document.getElementById("senhaCartao").value;
 
   localStorage.setItem('numCard', JSON.stringify(numCard));
   localStorage.setItem('senhaLogin', JSON.stringify(senhaLogin));
   document.onchange = saveItemDados;
 }
-
-
-
-
-
-function verificDados(){  
-
-  var numCard = localStorage.getItem('numCard');
-  console.log(numCard);
-  var senhaCard = localStorage.getItem('senhaLogin');
-  console.log(senhaCard);
-
-  var car = localStorage.getItem('numCartao2');
-  console.log(car);
-  var s = localStorage.getItem('senhaCartao');
-  console.log(s);
-
-if( car === numCard && s === senhaCard ){
  
-  alert('Tudo certo'); 
-  alert('Valores digitado no cadastro' + car + s);
-  alert('Valores do login' + numCard + senhaLogin);
+function verificDados(){
 
+var numCard = localStorage.getItem('numCard');
+console.log(numCard);
+var senhaCard = localStorage.getItem('senhaLogin');
+console.log(senhaCard);
 
+var car = localStorage.getItem('numCartao2');
+console.log(car);
+var s = localStorage.getItem('senhaCart');
+console.log(s);
 
-  return location.href='pagina2.html';
-  
-}
-else{
-  alert('Deu erro :('); 
-  alert('Valores digitado no cadastro' + car + s);//212.1212.1212.1121123
-  alert('Valores do login' + numCard+ senhaLogin);//212.1212.1212.1121123
- 
-  return location.href='LoginF.html';
-}
-}
-
-
-function validaDados(){
-  var inputs = document.getElementsByClassName('caixa3');
-  var len = inputs.length;
- var valid = true;
-  for (var i = 0; i < len; i++) {
-    if (!inputs[i].value) {
-      valid = false;
-    }
-  }
-  if (!valid) {
-    location.href='cadastro.html';
-    alert('Por favor preencha todos os campos.');
-    return false;
-  } else {
-    return true
-  }
-}
-
-
-function pegaDados() {
-var Nome  = document.getElementById("nome").value,
-
-var  Telefone= document.getElementById("ufone").value,
-
-var Endereco= document.getElementById("ende").value,
-
-var Cpf= document.getElementById("ucpf").value,
-
-var Email =document.getElementById("email").value,
-  
-var numCartao2 = document.getElementById("cod").value;
-
-var senhaCartao = document.getElementById( "senha").value;
-
-alert('Dados salvos com sucesso');
-
-localStorage.setItem('Nome', JSON.stringify(Nome));
-
-localStorage.setItem('Telefone', JSON.stringify(Telefone));
-
-localStorage.setItem('Endereco', JSON.stringify(Endereco));
-
-localStorage.setItem('Cpf', JSON.stringify(Cpf));
-  
-localStorage.setItem('Email', JSON.stringify(Email));
- 
-localStorage.setItem('numCartao2', JSON.stringify(numCartao2));
- 
-localStorage.setItem('senhaCartao', JSON.stringify(senhaCartao));
-
-document.onchange = saveItemDados;
-}
-
-function set() {
-  var numCard = document.getElementById("numC").value;
-  var senhaLogin = document.getElementById("senhaC").value;
-
-  localStorage.setItem('numCard', JSON.stringify(numCard));
-  localStorage.setItem('senhaLogin', JSON.stringify(senhaLogin));
-  document.onchange = saveItemDados;
-}
-
-function verificDados(){  
-  var numCard = localStorage.getItem('numCard');
-  console.log(numCard);
-  var senhaCard = localStorage.getItem('senhaLogin');
-  console.log(senhaCard);
-
-  var car = localStorage.getItem('numCartao2');
-  console.log(car);
-  var s = localStorage.getItem('senhaCartao');
-  console.log(s);
-
-if( car === numCard && s === senhaCard ){
- location.href ="pagina2.html";
-  alert('Tudo certo'); 
-return true;
+if(numCard ==  car &&senhaCard == s ){
+  location.href='pagina2.html';
+  alert('Tudo certo');
+  return true;
   
 }else{
-  alert('Dados inválidos:('); 
-       return false;
+  alert('Usuario ou senha incorretos');
+  return false;
+  
 }
+
 }
 
 function validaDados(){
@@ -251,6 +210,7 @@ function validaDados(){
     return true
   }
 }
+ /* Pagina de LOgin do Paciente */
 
 function mostraDiv(obj) {
   var el = document.getElementById('consulta');
@@ -281,6 +241,50 @@ function mostraRest(obj) {
       } else {
          el.style.display = 'none' 
          document.getElementById("restri").value='Restrições' 
-      }    
-}  
-     
+      }
+}
+
+function verConsulta(obj) {
+  var el = document.getElementById('tabela2');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("ver").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("ver").value='Ver+' 
+      }
+}
+
+
+function Anot(obj) {
+  var el = document.getElementById('img');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("anot").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("anot").value='Entrar' 
+      }
+}
+
+function Paci(obj) {
+  var el = document.getElementById('paci');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("pacient").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("pacient").value='Pacientes' 
+      }
+}
+function Pac(obj) {
+  var el = document.getElementById('anotacoes');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("Internado").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("Internado").value='P/Internados' 
+      }
+}
+
