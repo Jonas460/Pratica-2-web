@@ -3,6 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="css.css">
+
+    <script type="text/javascript" src="JS.js"></script>
+
 </head>
 
 
@@ -17,49 +20,388 @@
 </style>
 
 <body>
-    <center >
-    <nav>
-      
-        <br><div class="obj1"></div>
-      
-        <div class="texto1">
-            Sistema de Antendimento para profissionais da saúde e pacientes.
-        </div>   
-        
-        <div class= "obj3">
-      
-            <div class= "logo">        
-            <br> <br><div class="paciente">
-            Paciente: Jonas Araujo Leitão <br>
-            Numero do cartão: 123.4567.8910.1112  
-        </div> 
+    <center>
+        <nav>
+
+            <br>
+            <div class="obj1"></div>
+
+            <div class="texto1">
+                Sistema de Antendimento para profissionais da saúde e pacientes.
+            </div>
+
+            <div class="obj3">
+                <br>
+                <div class="logo">
+                    <br> <br>
+
+                    <div class="paciente" id="Div1">
+                        Paciente: Jonas Araujo Leitão <br>
+
+                        <h>Numero do Cartão: </h>
+
+                        <div><a href="sistema de saude.html">SAIR</a></div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+    </center>
+    <center><br>
+
+        <div class="botoes"><br>
+            <table>
+                <label for="restricoes"></label>
+                <input class="botoes2" type="submit" id="restri" value="Restrições" size="100"
+                    onclick="mostraRest('maisinfo');">
+
+                <label for="restricoes"></label>
+                <input class="botoes2" type="button" id="vaci" value="Vacinas" onclick=" mostraVacina('maisinfo');">
+
+                <label for="restricoes"></label>
+                <input class="botoes2" type="submit" id="consultar" value="Ver Consultas Medicas" size="100"
+                    onclick="mostraDiv('maisinfo');">
+
+            </table>
+        </div><br>
+
+        <div id="consulta" style="display: none;" class="quadrado">
+            <p class="texto3">Consultas</p>
+            <div class="tabela">
+               
+                <table border="2">
+                    
+                    <td>Nome</td>
+
+                    <td>E-mail:</td>
+
+                    <td>Data de nascimento:</td>
+
+                    <td>Cod. da Consulta:</td>
+
+                    <td>Data da Consulta:</td>
+
+                    <td>Mais detalhes da Consulta:</td>
+                    <tr>
+                        <td>Jonas Araujo Leitão</td>
+
+                        <td>jonasa460@gmail.com:</td>
+
+                        <td>01/05/2000</td>
+
+                        <td>056.045-5:</td>
+
+                        <td>06/08/2019:</td>
+
+                        <td>
+                            <input class="color" type="submit" id="ver" value="Ver+"
+                                onclick="verConsulta('maisinfo');">
+                        </td>
+                       
+                </table>
+            </div><br>
+                <div id="tabela2" class="quadrado" style="display: none;">
+                 
+                    <table border="2" >
+                        
+                        <td >Motivo da consulta</td>
     
-             
-        </div>
-      
-        </div>
-     
-    </nav>
-</center>
-<center><br>
+                        <td>Laudo do medico: </td>
     
-    <div class="botoes"><br>
-        <table >
-            <label for="restricoes" ></label>
-            <input class="botoes2" type="button" id="rest" value="Restrições">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <td>Exames: </td>
+    
+                        <td>Receita:</td>
+    
+                        <td>Altura:</td>
+
+                        <td>Peso:</td>
+
+                        <td>Pressão:</td>
+
+                        <td>Saturação:</td>
+                        <tr>
+                            <td>Estava com febre e dor de cabeça.</td>
+    
+                            <td>Foi constatado um caso de gripe H1N1 pois o paciente apresentou os sintomas de febre dor de cabeça e os pulmões comprometidos.</td>
+    
+                            <td>Foi pedido um exame de sangue para ver a contagem de plaquetas.</td>
+    
+                            <td>Foi passado um comprimido de Amoxilina para usar de 8 em 8 horas</td>
+    
+                            <td>1,70m</td>
+
+                            <td>80kg</td>
+
+                            <td>Maxima: 14
+                                 Mínima: 08
+                                </td>
+
+                            <td>98</td> 
+                        </tr>
+                    </table>
+                </div><br>
+                <div class="tabela">
+                    <table border="2">
+                        
+                        <td>Nome</td>
+    
+                        <td>E-mail:</td>
+    
+                        <td>Data de nascimento:</td>
+    
+                        <td>Cod. da Consulta:</td>
+    
+                        <td>Data da Consulta:</td>
+    
+                        <td>Mais detalhes da Consulta:</td>
+                        <tr>
+                            <td>Jonas Araujo Leitão</td>
+    
+                            <td>jonasa460@gmail.com:</td>
+    
+                            <td>01/05/2000</td>
+    
+                            <td>125.659-7:</td>
+    
+                            <td>20/01/2019:</td>
+    
+                            <td>
+                                <input class="color" type="submit" id="ver" value="Ver+"
+                                    onclick="verConsulta('maisinfo');">
+                            </td>
+                           
+                    </table>
+                </div><br>
+                <div class="tabela">
+                    <table border="2">
+                        
+                        <td>Nome</td>
+    
+                        <td>E-mail:</td>
+    
+                        <td>Data de nascimento:</td>
+    
+                        <td>Cod. da Consulta:</td>
+    
+                        <td>Data da Consulta:</td>
+    
+                        <td>Mais detalhes da Consulta:</td>
+                        <tr>
+                            <td>Jonas Araujo Leitão</td>
+    
+                            <td>jonasa460@gmail.com:</td>
+    
+                            <td>01/05/2000</td>
+    
+                            <td>654.987-8:</td>
+    
+                            <td>05/12/2018:</td>
+    
+                            <td>
+                                <input class="color" type="submit" id="ver" value="Ver+"
+                                    onclick="verConsulta('maisinfo');">
+                            </td>
+                           
+                    </table>
+                </div><br>
+                <div class="tabela">
+                    <table border="2">
+                        
+                        <td>Nome</td>
+    
+                        <td>E-mail:</td>
+    
+                        <td>Data de nascimento:</td>
+    
+                        <td>Cod. da Consulta:</td>
+    
+                        <td>Data da Consulta:</td>
+    
+                        <td>Mais detalhes da Consulta:</td>
+                        <tr>
+                            <td>Jonas Araujo Leitão</td>
+    
+                            <td>jonasa460@gmail.com:</td>
+    
+                            <td>01/05/2000</td>
+    
+                            <td>789.951-8:</td>
+    
+                            <td>25/05/2017:</td>
+    
+                            <td>
+                                <input class="color" type="submit" id="ver" value="Ver+"
+                                    onclick="verConsulta('maisinfo');">
+                            </td>
+                           
+                    </table>
+                </div><br>
+                <div class="tabela">
+                    <table border="2">
+                        
+                        <td>Nome</td>
+    
+                        <td>E-mail:</td>
+    
+                        <td>Data de nascimento:</td>
+    
+                        <td>Cod. da Consulta:</td>
+    
+                        <td>Data da Consulta:</td>
+    
+                        <td>Mais detalhes da Consulta:</td>
+                        <tr>
+                            <td>Jonas Araujo Leitão</td>
+    
+                            <td>jonasa460@gmail.com:</td>
+    
+                            <td>01/05/2000</td>
+    
+                            <td>456.565-8:</td>
+    
+                            <td>20/01/2017:</td>
+    
+                            <td>
+                                <input class="color" type="submit" id="ver" value="Ver+"
+                                    onclick="verConsulta('maisinfo');">
+                            </td>
+                           
+                    </table>
+                </div><br>
+                
+            </div><br>
+         
             
-            <label for="restricoes" ></label>
-            <input class="botoes2" type="button" id="exa" value="Exames">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="vacina" style="display: none;" >
+            <div class="quadrado" style="float:left;">
+                <table class=" texto3" border="2">
+                    
+                    <td class="tabe">Nome</td>
 
-            <label for="restricoes" ></label>
-            <input class="botoes2" type="button" id="hist" value="Ver Consultas Medicas" size="100">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td class="tabe">Vacina:</td>
 
-        </table>
-    </div><br>
-   <table class="quadrado">
+                    <td class="tabe">Data da vacina:</td>
 
-   </table>
+                    <td class="tabe" >Cod. da Vacina:</td>
+                    <tr>
+                        <td>Jonas Araujo</td>
+                        <td>Dupla Adulto</td>
+                        <td>18/08/18</td>
+                        <td>025.568-98</td>
+                    </tr>
+                    <td class="tabe">Nome</td>
 
-</center>
-    
+                    <td class="tabe" >Vacina:</td>
+
+                    <td class="tabe">Data da vacina:</td>
+
+                    <td class="tabe">Cod. da Vacina:</td>
+                    <tr> <td>Jonas Araujo</td>
+                        <td>H1N1</td>
+                        <td>25/07/18</td>
+                        <td>151.852-65</td>
+                    </tr>
+                    <td class="tabe">Nome</td>
+
+                    <td class="tabe">Vacina:</td>
+
+                    <td class="tabe">Data da vacina:</td>
+
+                    <td class="tabe" >Cod. da Vacina:</td>
+                    <tr>
+                        <td>Jonas Araujo</td>
+                        <td>Hepatite B</td>
+                        <td>18/05/18</td>
+                        <td>488.658-54</td>
+                    </tr>
+                    <td class="tabe">Nome</td>
+
+                    <td class="tabe" >Vacina:</td>
+
+                    <td class="tabe">Data da vacina:</td>
+
+                    <td class="tabe">Cod. da Vacina:</td>
+                    <tr> <td>Jonas Araujo</td>
+                        <td>Febre Amarela</td>
+                        <td>25/04/18</td>
+                        <td>632.846-84</td>
+                    </tr>
+                    
+               
+                </table>
+            </div>
+                <div class="quadrado" style="float: right 80px">     
+                    <table class=" texto3" border="2">               
+                 
+                <td class="tabe">Nome</td>
+
+                <td class="tabe">Vacina:</td>
+
+                <td class="tabe">Data da vacina:</td>
+
+                <td class="tabe" >Cod. da Vacina:</td>
+                <tr>
+                    <td>Jonas Araujo</td>
+                    <td>Influensa</td>
+                    <td>02/06/17</td>
+                    <td>872.054-35</td>
+                </tr>
+                <td class="tabe">Nome</td>
+
+                <td class="tabe" >Vacina:</td>
+
+                <td class="tabe">Data da vacina:</td>
+
+                <td class="tabe">Cod. da Vacina:</td>
+                <tr> <td>Jonas Araujo</td>
+                    <td>H1N1</td>
+                    <td>30/04/17</td>
+                    <td>235.951-06</td>
+                
+                </tr>
+                <td class="tabe">Nome</td>
+
+                <td class="tabe">Vacina:</td>
+
+                <td class="tabe">Data da vacina:</td>
+
+                <td class="tabe" >Cod. da Vacina:</td>
+                <tr>
+                    <td>Jonas Araujo</td>
+                    <td>RUB</td>
+                    <td>05/02/17</td>
+                    <td>892.652-05</td>
+                </tr>  
+                <td class="tabe">Nome</td>
+
+                <td class="tabe">Vacina:</td>
+
+                <td class="tabe">Data da vacina:</td>
+
+                <td class="tabe" >Cod. da Vacina:</td>
+                <tr>
+                    <td>Jonas Araujo</td>
+                    <td>H1n1</td>
+                    <td>26/10/16</td>
+                    <td>164.135-96</td>
+                </tr>           
+            
+                </table>
+            
+                
+        </div><br>
+           
+        <div id="rest" style="display: none;" class="quadrado">
+            <p class="texto3">Restrições</p>
+            
+            
+            </table>
+        </div><br>
+
+
+    </center>
+
 </body>
