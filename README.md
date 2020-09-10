@@ -8,10 +8,10 @@
 2.2.2 - Agente da saúde
 2.2.3 - Enfermeiro
 2.2.4 - Técnico de enfermagem
-4 - Funcionalidades
-4.1 - Atendimento
-4.2 - Consulta
-4.2.2 - Solicitar exame
+3 - Funcionalidades
+3.1 - Atendimento
+3.2 - Consulta
+3.2.2 - Solicitar exame
 
 # 1 - Descrição do projeto:
 
@@ -43,19 +43,21 @@ Caso o Funcionário tiver se identificado como Enfermeiro, deverá informar nome
 
 Caso o Funcionário tiver se identificado como Técnico de enfermagem, deverá informar nome, COREN e cpf, sendo a chave primária.
 
-# 4 - Funcionalidades:
+# 3 - Funcionalidades:
 
-# 4.1 - Atendimento:
+# 3.1 - Atendimento:
 
 Uma das funções que o usuário pode solicitar é o Atendimento, onde o sistema irá indicar o local de atendimento, e informar o número de pessoas na fila e os funcionários que estão trabalhando no local, mostrando seus nomes e seus respectivos cargos e o tipo de funcionários.
 
-# 4.2 - Consulta:
+# 3.2 - Consulta:
 
 Outra função é a Consulta, onde o usuário solicita ao sistema locais de atendimento com Funcionários do tipo Médico, informando depois o tipo da consulta, exame(caso tenha), data e medicamento (caso tenha, o usuário deve receber uma Receita, que deve apresentar o carimbo médico).
 
-# 4.2 - Solicitar exame:
+# 3.2 - Solicitar exame:
 
 O usuário pode solicitar um exame em sua consulta, onde deve constar o laboratório, tipo de exame, local do exame, data do exame e data para receber o exame.
 
-# 4.3- Armazenamento de Vacinas e remédios 
+# 3.3- Armazenamento de Vacinas e remédios 
 O sistema irá armazenar os dados sobre qual remédio faz mal ao paciente, quais suas alergias e quais vacinas ele já tomou, através de um banco de dados que pode ser acessado em qualquer cidade ou estado do Brasil tanto na rede pública como privada.
+# 3.4- Armazenar os usuarios cadastrados 
+O sistema irá armazenar os dados tanto dos pacientes quanto dos funcionarios da saúde. 
