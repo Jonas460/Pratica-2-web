@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="pagina2.html">
     <script type="text/javascript" src="JS.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+   
 
 </head>
 
@@ -22,31 +25,37 @@
         background-color: white;
     }
 </style>
-<body>
-    
+
+<body >
+
     <nav>
-        <br><div class="obj1"></div>
+        <br>
+        <div class="obj1"></div>
         <div class="texto1">
             Sistema de Antendimento para profissionais da saúde e pacientes.
         </div>
-        <div class= "obj3">
-            <br><div class= "logo"></div>
+        <div class="obj3">
+            <br>
+            <div class="logo"></div>
         </div>
     </nav><br>
-    <center><input class="texto3" type="text" value="Cadastro de Pacientes:" ></center> 
-   
-   <form method="POST"  action="sistema de saude.html" onsubmit="return pegaDados()">
+    <center><input class="texto3" type="text" value="Cadastro de Pacientes:"></center>
+
+    <form method="POST"  action="sistema de saude.html" onsubmit="return pegaDados()">
         <table class="quadrado">
 
             <th class="texto3">
 
                 <label for="nome">Nome:</label>
                 <input class="caixa3" type="text" id="nome" />
+
                 <label for="pro3">Telefone:</label>
                 <input class="caixa3" type="text" class="form-control" id="ufone"
                     onkeypress="$(this).mask('(00) 0.0000-0000');" placeholder="(00)9.0000-0000" /><br />
+
                 <label for="pro3">Email:</label>
                 <input class="caixa3" type="email" id="email" /><br />
+
                 <label for="pro3">Endereço Completo:</label>
                 <input class="caixa3" type="text" id="ende" /><br />
             <th>
@@ -54,13 +63,16 @@
                 <label for="pro2">CPF:</label>
                 <input class="caixa3" type="text" id="ucpf" onkeypress="$(this).mask('000.000.000-00');"
                     placeholder="000.000.000-00" /><br>
+                
                 <label for="nome">Numero do Cartão:</label><br>
-                <input class="caixa3" type="text" id="numCartao1" id="cod"
+                <input class="caixa3" type="text" id="numCartao1" 
                     onkeypress="$(this).mask('000.0000.0000.0000');" placeholder="000.0000.0000.0000"><br>
-                Senha: <br>
+               
+                    Senha: <br>
                 <input class="caixa2" type="password" id="senha" /> <input class="caixa5" type="button"
                     onclick=" mostrarSenha2()" value="Ver senha" /> <br>
-                Confirmar senha:
+                
+                    Confirmar senha:
                 <input class="caixa3" type="password" id="senhaConfirm2" />
                 <script>
                     function mostrarSenha2() {
@@ -72,13 +84,15 @@
                         }
                     }</script>
         </table>
+        <center>
 
-<center>
-   
-<div>
-    <input class="color" type="button"  value="Cancelar" onclick="javascript: location.href='sistema%20de%20saude.html';" > 
-    <input class="color" type="submit"  value="Enviar" onclick="validaDados()">
-</div><br>
-</center>
-</form>
+            <div>
+                <input class="color" type="button" value="Cancelar"
+                    onclick="javascript: location.href='sistema%20de%20saude.html';">
+                <input class="color"  type="submit" value="Enviar" onclick="validaDados()" >
+            </div><br>
+            
+        </center>
+    </form>
 </body>
+
