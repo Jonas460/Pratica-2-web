@@ -169,4 +169,118 @@ function validaDados(){
 }
 
 
+function pegaDados() {
+var Nome  = document.getElementById("nome").value,
 
+var  Telefone= document.getElementById("ufone").value,
+
+var Endereco= document.getElementById("ende").value,
+
+var Cpf= document.getElementById("ucpf").value,
+
+var Email =document.getElementById("email").value,
+  
+var numCartao2 = document.getElementById("cod").value;
+
+var senhaCartao = document.getElementById( "senha").value;
+
+alert('Dados salvos com sucesso');
+
+localStorage.setItem('Nome', JSON.stringify(Nome));
+
+localStorage.setItem('Telefone', JSON.stringify(Telefone));
+
+localStorage.setItem('Endereco', JSON.stringify(Endereco));
+
+localStorage.setItem('Cpf', JSON.stringify(Cpf));
+  
+localStorage.setItem('Email', JSON.stringify(Email));
+ 
+localStorage.setItem('numCartao2', JSON.stringify(numCartao2));
+ 
+localStorage.setItem('senhaCartao', JSON.stringify(senhaCartao));
+
+document.onchange = saveItemDados;
+}
+
+function set() {
+  var numCard = document.getElementById("numC").value;
+  var senhaLogin = document.getElementById("senhaC").value;
+
+  localStorage.setItem('numCard', JSON.stringify(numCard));
+  localStorage.setItem('senhaLogin', JSON.stringify(senhaLogin));
+  document.onchange = saveItemDados;
+}
+
+function verificDados(){  
+  var numCard = localStorage.getItem('numCard');
+  console.log(numCard);
+  var senhaCard = localStorage.getItem('senhaLogin');
+  console.log(senhaCard);
+
+  var car = localStorage.getItem('numCartao2');
+  console.log(car);
+  var s = localStorage.getItem('senhaCartao');
+  console.log(s);
+
+if( car === numCard && s === senhaCard ){
+ location.href ="pagina2.html";
+  alert('Tudo certo'); 
+return true;
+  
+}else{
+  alert('Dados inválidos:('); 
+       return false;
+}
+}
+
+function validaDados(){
+  var inputs = document.getElementsByClassName('caixa3');
+  var len = inputs.length;
+ var valid = true;
+  for (var i = 0; i < len; i++) {
+    if (!inputs[i].value) {
+      valid = false;
+    }
+  }
+  if (!valid) {
+    location.href='cadastro.html';
+    alert('Por favor preencha todos os campos.');
+    return false;
+  } else {
+    return true
+  }
+}
+
+function mostraDiv(obj) {
+  var el = document.getElementById('consulta');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("consultar").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("consultar").value='Ver Consultas Medicas' 
+      }
+}
+
+function mostraVacina(obj) {
+  var el = document.getElementById('vacina');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("vaci").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("vaci").value='Vacinas' 
+      }
+}
+function mostraRest(obj) {
+  var el = document.getElementById('rest');
+      if ( el.style.display == 'none' ) {
+         el.style.display = 'block';
+         document.getElementById("restri").value='Ocultar'
+      } else {
+         el.style.display = 'none' 
+         document.getElementById("restri").value='Restrições' 
+      }    
+}  
+     
