@@ -55,7 +55,15 @@ border-radius: 63px;
     box-sizing: border-box;
     border-radius: 3px;
 }
-
+.obj4{
+    width: 600px;
+    height: 220px;
+    
+    background: #FFFFFF;
+    border: 5px solid #144C8C;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
 .texto2{
 width: 770px;
 height: 85px;
@@ -129,6 +137,26 @@ input.caixa2 {
     box-sizing: border-box;
     
 }
+
+input.caixa6 {
+    width: 350px;
+    height: 57px;
+
+margin-left: 150px ;
+margin-bottom: 15px;
+font-family: Arimo;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 55px;
+text-align: center;
+
+color: #144C8C;
+background: white;
+border-radius: 32px;
+
+border: 3px solid #144C8C;
+}
 input.caixa3 {
     width: 550px;
     height: 55px;
@@ -156,14 +184,29 @@ height: 57px;
 font-family: Arimo;
 font-style: normal;
 font-weight: bold;
-font-size: 48px;
+font-size: 40px;
 line-height: 55px;
 text-align: center;
+
 
 color: #FFFFFF;
 background: #144C8C;
 border-radius: 32px;
 }
+input.color2{
+    width: 272px;
+    height: 57px;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    
+    color: #c2c2c2;
+    background: #062344;
+    border-radius: 32px;
+    }
 
 input.barra{
 width: 973.87px;
@@ -184,8 +227,6 @@ border-radius: 32px;
 /*CSS da Pagina 2 */
 
 .botoes{
-width: 1324px;
-height: 141px;
 
 background: #FFFEFE;
 border: 8px solid #144C8C;
@@ -197,10 +238,11 @@ width: 400px;
 height: 79px;
 background: #144C8C;
 border-radius: 21px;
-
+margin-left : 20px;
 width: 400px;
 height: 80px;
 
+margin-bottom: 20px;
 font-family: Arimo;
 font-style: normal;
 font-weight: bold;
@@ -212,24 +254,31 @@ color: #FFFFFF;
 }
 
 .quadrado{
-width: 1324px;
-height: 400px;
 
 background: #FFFFFF;
 border: 5px solid #144C8C;
 box-sizing: border-box;
 border-radius: 3px;
 }
+.tabe{
+font-family: Arimo;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 41px;
+text-align: center;
+background: #144C8C;
+
+color: white;
+}
 
 .paciente{
-    width: 400px;
-    height: 90px;
-    background: #144C8C;
+    width: 450px;
+    height: 120px;
     border-radius: 21px;
     
-    width: 400px;
-    height: 90px;
     
+    margin-left : 350px;
     font-family: Arimo;
     font-style: normal;
     font-weight: bold;
@@ -237,10 +286,41 @@ border-radius: 3px;
     line-height: 30px;
     text-align: center;
     
-    color: #FFFFFF;
+    color: #144C8C;
 
 }
+.tabela{
+    width: 500px;
+    height: 150px;
+    margin-left : -800px;
+    font-family: Arimo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #144C8C;
 
+}
+.enferImg{
+height: 300px;
+background: url(img/Capturar.JPG);
+background-repeat: no-repeat;
+
+background-position: center;
+width: calc(150vh - 20px);
+
+}
+.interImg{
+    height: 350px;
+    background: url(img/Capturar2.JPG);
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    width: calc(150vh - 20px);
+    
+    }
 div#Centralizar{
     margin: 0 auto;
     width: 700px;
