@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title> Exames </title>
+    <link rel="stylesheet" href="enfermeiro.css"> 
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url(img/pexels-negative-space-48604.jpg);
+            background-attachment: fixed;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: white;
+        }
+    </style>
+
+
+    <center>
+    <nav>
+      
+        <br><div class="caixaAzul"></div>
+      
+        <div class="texto">
+            Sistema de Antendimento para profissionais da saúde e pacientes.
+        </div>   
+        
+        <div class= "bordaInicio"></div>
+    
+    </nav>
+    </center>
+
+    <center><br>
+    
+    <div class="bordaBotoes"><br>
+
+        <label for="Exames"></label>
+        <a href="pagina_medico.html">
+        <input class="botaoEnf" type="button" id="exa" value="Voltar">
+        </a>
+<br><br><br>
+<!----------------------------- FORMULARIO ----------------------------------->
+<br><div id="caixaAzul2">
+    Solicitação de exame
+</div>  
+<br><br><br><br><br>
+     
+
+<form name="card" method="GET" class="quadrado">
+    
+    <div id="info">
+        Nome: <input class="cortexto" type="text" id="f_nome" /><br />
+        E-mail: <input class="cortexto" type="email" id="email" placeholder="exemplo@gmail.com" /><br />
+        Data de nascimento: <input class="cortexto"type="date" id="data" /><br />
+        Número do cartão do SUS: <input class="cortexto"type="text" id="cartao" /><br />
+        Telefone: <input class="cortexto"type="tel" id="telefone" placeholder="(XX)XXXXXXXXX" /><br />
+        Endereço: <input class="cortexto" type="text" id="endereco" /><br />
+        Data do exame: <input class="cortexto"type="date" id="dataExame" /><br />
+    </div>
+        <table id="checkbox" name="checkbox">
+            <caption style="text-align:left">Exames:</caption>
+            <th>
+
+                <label for="ex1">Exame de sangue</label>
+                <input  type="checkbox" name="exame" id="Exame de sangue"
+                    value=1 /><br />
+
+                <label for="ex2">Exame de feses </label>
+                <input type="checkbox" name="exame" id="Exame de feses"
+                    value=2 /><br />
+
+                <label for="ex3"> Exame de urina </label>
+                <input type="checkbox" name="exame" id=" Exame de urina"
+                    value=10 /><br />
+            <th>
+            </th>
+
+        </table>
+
+    <br>
+    
+    
+
+    <script>
+        function receber_dados() {
+            var exames = document.forms[0];
+            var txt = "";
+            var i;
+            
+            var x_nome = document.getElementById("f_nome").value;
+            var x_email = document.getElementById("email").value;
+            var x_data = document.getElementById("data").value;
+            var x_cartao= document.getElementById("cartao").value;
+            var x_telefone= document.getElementById("telefone").value;
+            var x_dataExame= document.getElementById("dataExame").value;
+            var x_endereco= document.getElementById("endereco").value;
+
+
+            var table = document.getElementsByTagName('table')[1];
+            var newRow = table.insertRow(1);
+            var cel1 = newRow.insertCell(0);
+            var cel2 = newRow.insertCell(1);
+            var cel3 = newRow.insertCell(2);
+            var cel4 = newRow.insertCell(3);
+            var cel5 = newRow.insertCell(4);
+            var cel6 = newRow.insertCell(5);
+            var cel7 = newRow.insertCell(6);
+            var cel8 = newRow.insertCell(7);
+
+            for (i = 0; i < exames.length; i++) {
+                if (exames[i].checked) {
+                    txt = txt + exames[i].id + " ,"; 
+                }
+            }
+
+            cel1.innerHTML = x_nome;
+            cel2.innerHTML = x_email;
+            cel3.innerHTML = x_data;
+            cel4.innerHTML = x_cartao;
+            cel5.innerHTML = x_telefone;
+            cel6.innerHTML = txt;
+            cel8.innerHTML = x_dataExame;
+            cel7.innerHTML = x_endereco;
+            
+
+        }
+
+    </script>
+
+</form><br>
+<input class="color" type="reset" value="Clear">
+
+<input class="color" type="button" onclick="receber_dados()" value="ADD">
+
+<table border="2" id="tabela" name="tabela" class="quadrado">
+    
+    <td><h3> Nome</h3></td>
+
+    <td><h3> E-mail </h3></td>
+
+    <td><h3> Data de nascimento </h3></td>
+
+    <td><h3> N° cartão do SUS </h3></td>
+
+    <td><h3> Telefone </h3></td>
+
+    <td><h3> Exames </h3></td>
+    
+    <td><h3> Endereço </h3></td>
+
+    <td><h3> Data exame(s) </h3></td>
+
+
+</table>
+
+
+
+<!------------------------------------------------------------------------------->
+</center>
+    
+    
+</body>
+</html>
