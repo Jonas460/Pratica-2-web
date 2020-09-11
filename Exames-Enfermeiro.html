@@ -76,10 +76,128 @@
         </div><br>
 
                  
-        <div id="anotacoes" style="display: none;" class="interImg">           
+        <div id="anotacoes" style="display: none;" >    
+            <form name="card" method="GET" class="quadrado">
+    <br>
+                <div id="info">
+                    Nome: <input class="cortexto" type="text" id="f_nome" /><br />
+                    Idade <input class="cortexto"type="text" id="idade" /><br />
+                    Número do cartão do SUS: <input class="cortexto"type="text" id="cartao" /><br />
+                    Sintomas: <textarea id="sintomas">  </textarea><br>
+                    Anotações: <textarea id="anotacoes">  </textarea><br>
+                    Data de exames já realizados: <input class="cortexto"type="date" id="dataExame" /><br />
+                </div>
+                    <table id="checkbox" name="checkbox">
+                        <caption style="text-align:left">Exame(s) já realizados:</caption>
+                        <th>
             
+                            <label for="ex1">Exame de sangue</label>
+                            <input  type="checkbox" name="exame" id="Exame de sangue"
+                                value=1 /><br />
+            
+                            <label for="ex2">Exame de feses </label>
+                            <input type="checkbox" name="exame" id="Exame de feses"
+                                value=2 /><br />
+            
+                            <label for="ex3"> Exame de urina </label>
+                            <input type="checkbox" name="exame" id=" Exame de urina"
+                                value=10 /><br />
+                        <th>
+                        </th>
+            
+                    </table>
+            
+                <br>
+                
+            
+                <script>
+                    function receber_dados() {
+                        var exames = document.forms[0];
+                        var txt = "";
+                        var i;
+                        
+                        var x_nome = document.getElementById("f_nome").value;
+                        var x_idade = document.getElementById("idade").value;
+                        var x_cartao= document.getElementById("cartao").value;
+                        var x_sintomas= document.getElementById("sintomas").value;
+                        var x_dataExame= document.getElementById("dataExame").value;
+                        var x_endereco= document.getElementById("anotacoes").value;
+            
+            
+                        var table = document.getElementsByTagName('tabela')[1];
+                        var newRow = table.insertRow(1);
+                        var cel1 = newRow.insertCell(0);
+                        var cel2 = newRow.insertCell(1);
+                        var cel3 = newRow.insertCell(2);
+                        var cel4 = newRow.insertCell(3);
+                        var cel5 = newRow.insertCell(4);
+                        var cel6 = newRow.insertCell(5);
+                        var cel7 = newRow.insertCell(6);
+                   
+                        for (i = 0; i < exames.length; i++) {
+                            if (exames[i].checked) {
+                                txt = txt + exames[i].id + " ,"; 
+                            }
+                        }
+            
+                        cel1.innerHTML = x_nome;
+                        cel2.innerHTML = x_idade;
+                        cel3.innerHTML = x_cartao;
+                        cel4.innerHTML = x_sintomas;
+                        cel5.innerHTML = txt;
+                        cel6.innerHTML = x_dataExame;
+                        cel7.innerHTML = x_endereco;
+                        
+            
+                    }
+        
+                </script>
+      
+            <br>
+            
+            <table border="2" id="tabela" name="tabela" class="quadrado">
+                
+                <td><h3> Nome</h3></td>
+            
+                <td><h3> Idade </h3></td>
+            
+                <td><h3> N° cartão do SUS </h3></td>
+            
+                <td><h3> Sintomas </h3></td>
+            
+                <td><h3> Exame(s) já realizados </h3></td>
+                
+                <td><h3> Data exame(s) já realizados</h3></td>
+        
+                <td><h3> Anotações</h3></td>
+            
+            <tr>
+                <td><h3 id="x_nome"> </h3></td>
+            
+                <td><h3 id="x_idade">  </h3></td>
+            
+                <td><h3 id="x_cartao">  </h3></td>
+            
+                <td><h3 id="x_sintomas"> </h3></td>
+            
+                <td><h3 id="txt"><p id="txt"></p> </h3></td>
+                
+                <td><h3 id="x_dataExame"> </h3></td>
+        
+                <td><h3 id="x_endereco"> </h3></td>
+            </tr>
+            </table>
+            <br></form>
+            <div>
+                
+            <input class="color" type="reset" value="Clear">
+            
+            <input class="color" type="button" onclick="receber_dados()" value="ADD">  
+            
+        </div>
         </div><br>
-           
+    
+       
        
     </center>
 
